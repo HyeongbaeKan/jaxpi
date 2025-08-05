@@ -1,10 +1,8 @@
 import ml_collections
 
-import jax.numpy as jnp
-
 
 def get_config():
-    """Get the default hyperparameter configuration."""
+    """Configuration used for the SOTA setting."""
     config = ml_collections.ConfigDict()
 
     config.mode = "train"
@@ -93,10 +91,10 @@ def get_config():
     saving.save_every_steps = 10000
     saving.num_keep_ckpts = 10
 
-    # Input shape for initializing Flax models
+    # Input shape for initializing models
     config.input_dim = 3
 
-    # Integer for PRNG random seed.
+    # Integer for random seed
     config.seed = 42
 
     return config

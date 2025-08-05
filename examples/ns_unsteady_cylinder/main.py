@@ -1,8 +1,11 @@
-# DETERMINISTIC
-import os
+"""Entry point for the unsteady cylinder example.
 
-# os.environ["XLA_FLAGS"] = "--xla_gpu_deterministic_reductions --xla_gpu_autotune_level=0"
-# os.environ['TF_CUDNN_DETERMINISTIC'] = '1'
+The original example configured several JAX/XLA specific flags for
+deterministic execution.  Since the codebase has been migrated to PyTorch,
+those settings are no longer required and have been removed.
+"""
+
+import os
 
 from absl import app
 from absl import flags
@@ -10,8 +13,8 @@ from absl import logging
 
 from ml_collections import config_flags
 
-import jax
-jax.config.update("jax_default_matmul_precision", "highest")
+# This example now runs with PyTorch instead of JAX.  Any previous JAX specific
+# configuration (e.g. XLA flags) has been removed.
 
 import train
 import eval

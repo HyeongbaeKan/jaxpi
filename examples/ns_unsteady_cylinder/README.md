@@ -1,5 +1,9 @@
 # Navier–Stokes flow around a cylinder
 
+> **Note**: This example has been migrated from JAX to PyTorch.  The training
+> and evaluation scripts in this directory now rely solely on PyTorch
+> functionality.
+
 ## Problem Set-up
 
 We follow the problem setup in [here](https://wwwold.mathematik.tu-dortmund.de/~featflow/en/benchmarks/cfdbenchmarking/flow/dfg_benchmark2_re100.html)
